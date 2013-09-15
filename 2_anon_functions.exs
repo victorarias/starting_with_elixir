@@ -2,7 +2,7 @@
 
 add = fn a, b -> a + b end
 
-add.(1, 2)
+add.(1, 2) # => 1 + 2
 
 # Parameters pattern matching, aka "Overloading"
 
@@ -25,15 +25,20 @@ end
 
 # The & notation
 
+# the following function
 Enum.map [1, 2, 3], fn n -> n * n end
 # is the same as
 Enum.map [1, 2, 3], &1 * &1
 
+# the following function
 add = fn a, b -> a + b end
-#is the same as
+# is also the same as
 add = &1 + &2
 
+# but the & notation requires some attention
+# the following scenario is tricky
 add_and_sum = { &1 + &2, &1 * &2 }  # => {&Kernel.+/2, &Kernel.*/2}
-# is not the same as
+# the above function isn't what you expect
+# what you really want is
 add_and_sum = &{ &1 + &2, &1 * &2 } # => #Function<12.80484245 in :erl_eval.expr/5>
 

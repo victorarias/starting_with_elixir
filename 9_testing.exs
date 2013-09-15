@@ -1,3 +1,9 @@
+# Elixir bundles a simple yet effective testing library
+# is worth noting that the 'assert' used below
+# is actually a macro, and because of that
+# it can "see" the code being asserted
+# and print meaninful error messages when the assert fails
+
 ExUnit.start
 
 defmodule Tests do

@@ -1,3 +1,6 @@
+# Because everything here is working code, is strongly recommended that
+# this "guide" should be ran inside the Elixir interactive mode -> iex
+
 # "Assignment"
 
 a = 1 # => 1
@@ -28,7 +31,7 @@ list = [1, 10, 20] # => [1, 10, 20]
 list = [1, 10, 20] # => [1, 10, 20]
 
 # Lists are immutable linked lists, so random access is expensive,
-# however they can be constructed or deconstructed with pattern matching
+# however, they can be constructed or deconstructed with pattern matching
 
 [head | tail] = list # => head = 1; tail = [10, 20]
 
@@ -48,8 +51,8 @@ tuple = { 10, 20 }
 
 # Atoms
 
-# Contants, same as symbols on Ruby.
-# Constant within the application and across machines
+# atoms are contants, same as symbols on Ruby.
+# an atom is constant within the application and across machines
 
 { a, b } = { :foo, :bar }
 
