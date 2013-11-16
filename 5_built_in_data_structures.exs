@@ -29,6 +29,6 @@ List.flatten [[1], 2, [[[3]]]] # => [1, 2, 3]
 
 # Enum & Stream
 
-Enum.each ["a", "b", "c"], IO.puts(&1)
+Enum.each ["a", "b", "c"], &IO.puts(&1)
 Enum.all? [2, 4, 6], &(rem(&1, 2) == 0)
 Enum.sort [1, 10, 2, 42, 17] # => [1, 2, 10, 17, 42]
